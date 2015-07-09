@@ -2,6 +2,24 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    header(role="banner")
+      .row
+        .large-12.columns
+          h1: a(href="#{site_url}/index.html") Nodeauth
+      #main-nav.row
+          .large-12.columns
+            nav.top-bar.main-nav
+              section.top-bar-section
+                ul.right
+                  li(class=(title === 'Members') ? 'active' : '')
+                    a(href="/") Members
+                  li(class=(title === 'Register') ? 'active' : '')
+                    a(href="/users/register") Register
+                  li(class=(title === 'Login') ? 'active' : '')
+                    a(href="/users/login") Login
+
     block content
