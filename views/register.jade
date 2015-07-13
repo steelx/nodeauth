@@ -6,6 +6,11 @@ block content
 			h1= title
 			p Please #{title} using form below.
 
+			if errors
+				ul.errors
+					each error, i in errors
+						li.alert-box.alert #{error.msg}
+
 			article
 				form(method='post',action='/users/register',enctype='multipart/form-data')
 					.row
@@ -13,6 +18,11 @@ block content
 							label.inline Your Name
 						.large-8.columns
 							input#name(type="text", name="name", placeholder="Full name")
+					.row
+						.large-4.columns
+							label.inline Username
+						.large-8.columns
+							input#name(type="text", name="username", placeholder="Username")
 					.row
 						.large-4.columns
 							label.inline Your Email
