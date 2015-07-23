@@ -10,4 +10,5 @@ Logged users should only see Logout button.
 
 #Setup
 `npm install` //download node modules
-`npm star` //run server
+
+`npm start` //run server
