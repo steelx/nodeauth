@@ -1,3 +1,33 @@
 a {
   color: #00B7FF;
 }
+
+
+#tooltips {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+#tooltips ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+#tooltips .success {
+  background-color: #43AC6A;
+  border-color: #3a945b;
+  color: #FFFFFF;
+}
+
+#tooltips .info {
+  background-color: #a0d3e8;
+  border-color: #74bfdd;
+  color: #4f4f4f;
+}
+
+#tooltips .warning {
+  background-color: #f04124;
+  border-color: #de2d0f;
+  color: #FFFFFF;
+}

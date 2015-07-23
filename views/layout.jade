@@ -9,7 +9,7 @@ html
     header(role="banner")
       .row
         .large-12.columns
-          h1: a(href="#{site_url}/index.html") Nodeauth
+          h1: a(href="/about") Nodeauth
       #main-nav.row
           .large-12.columns
             nav.top-bar.main-nav
@@ -21,5 +21,10 @@ html
                     a(href="/users/register") Register
                   li(class=(title === 'Login') ? 'active' : '')
                     a(href="/users/login") Login
+                  li
+                    a(href="/users/logout") Logout
+
+    aside#tooltips
+      != messages()
 
     block content
